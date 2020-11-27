@@ -1,0 +1,11 @@
+.message {
+    display: flex;
+}
+
+.self {
+    flex-direction: row-reverse;
+}
+
+.other {
+    flex-direction: row;
+}

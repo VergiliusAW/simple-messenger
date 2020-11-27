@@ -1,0 +1,37 @@
+.input {
+    border: 1px solid #456990;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    width: 20rem;
+    font-size: 1rem;
+    outline: none;
+    margin-right: 1rem;
+}
+
+.svg {
+    transition: fill 50ms ease-in;
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+}
+
+.svgHovered {
+    fill: #EF8354;
+    transition: fill 50ms ease-in;
+    cursor: pointer;
+}
+
+.button {
+    width: 24px;
+    height: 24px;
+    margin: 0.3rem;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #456990;
+    max-width: max-content;
+}
