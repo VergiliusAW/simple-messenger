@@ -2,10 +2,30 @@
     display: flex;
 }
 
+.messageBody {
+    border-radius: 15px;
+    max-width: 20rem;
+    padding: 5px 8px;
+    word-wrap: break-word;
+}
+
 .self {
     flex-direction: row-reverse;
+    margin-right: 5px;
+}
+
+.self p {
+    color: white;
+    background: #0070f3;
 }
 
 .other {
     flex-direction: row;
+    margin-left: 5px;
+}
+
+.other p {
+    color: black;
+    background: white;
+    box-shadow: 1px 1px 2px #e1e1e1;
 }

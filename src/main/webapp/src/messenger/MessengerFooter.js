@@ -35,6 +35,11 @@ function FooterSendButton(props) {
 }
 
 function FooterButton(props) {
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            console.log('do validate')
+        }
+    }
     function buttonAction() {
         const message = {
             isSelf:true,
