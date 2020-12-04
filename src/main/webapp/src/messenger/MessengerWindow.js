@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useRef, useState} from 'react'
 import MessageList from "./MessageList";
 import MessengerFooter from "./MessengerFooter";
 import classes from './MessengerWindow.module.css'
