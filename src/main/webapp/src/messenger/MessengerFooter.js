@@ -60,8 +60,10 @@ export default function MessengerFooter(props) {
             isSelf: true,
             message: document.getElementById('inp-msg').value
         }
-        props.callbackAdd(message)
-        document.getElementById('inp-msg').value = ""
+        if (message.message.replaceAll(" ","")!=="") {
+            props.callbackAdd(message)
+            document.getElementById('inp-msg').value = ""
+        }
         // console.log('Отправляет данные из инпута на сервер. Пока ожидает отправки появляется лоадер')
     }
 

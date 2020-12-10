@@ -6,6 +6,7 @@
     border-radius: 15px;
     max-width: 20rem;
     padding: 5px 8px;
+    margin: 0.25rem 0;
     word-wrap: break-word;
     box-shadow: 1px 1px 2px #e1e1e1;
 }
@@ -18,6 +19,11 @@
 .self p {
     color: white;
     background: #0070f3;
+}
+
+.self p::selection {
+    /*background-color: white;*/
+    color: #EF8354;
 }
 
 .other {
