@@ -1,8 +1,5 @@
 package ashcheulov.mr.db;
 
-import io.smallrye.common.constraint.NotNull;
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 
 @Entity
@@ -10,12 +7,9 @@ import javax.persistence.*;
 public class WhatTheHeck {
 
     @Id
-    @Column(name = "id_message")
-    @GenericGenerator(name="gen" , strategy="increment")
-    @GeneratedValue(generator="gen")
-//    @Basic(optional = false)
-    @NotNull
-    private int id_message;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private int id;
 
     @Column(name = "text_message")
     private String text_message;
@@ -26,14 +20,6 @@ public class WhatTheHeck {
     @ManyToOne(optional = false)
     @JoinColumn(name = "id_user", insertable = false, updatable = false)
     private HeckingUsers heckingUsers;
-
-    public int getId_message() {
-        return id_message;
-    }
-
-    public void setId_message(int id_message) {
-        this.id_message = id_message;
-    }
 
     public String getText_message() {
         return text_message;
@@ -57,5 +43,13 @@ public class WhatTheHeck {
 
     public void setHeckingUsers(HeckingUsers heckingUsers) {
         this.heckingUsers = heckingUsers;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

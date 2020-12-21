@@ -21,7 +21,8 @@ public class DAO {
         TypedQuery<WhatTheHeck> typedQuery = entityManager.createQuery("SELECT p FROM WhatTheHeck p", WhatTheHeck.class);
         typedQuery.getResultList().forEach(heck -> jsonArray.add(new JsonObject()
                 .put("text_message",heck.getText_message())
-                .put("user_name",heck.getHeckingUsers().getUser_name())));
+                .put("user_name",heck.getHeckingUsers().getUser_name())
+                .put("user_id",heck.getHeckingUsers().getId())));
         return jsonArray;
     }
 

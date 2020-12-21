@@ -1,8 +1,6 @@
 package ashcheulov.mr.db;
 
 import io.smallrye.common.constraint.NotNull;
-import org.checkerframework.common.reflection.qual.ClassBound;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.List;
@@ -12,29 +10,19 @@ import java.util.List;
 public class HeckingUsers {
 
     @Id
-    @Column(name = "id_user")
-    @GenericGenerator(name="gen" , strategy="increment")
-    @GeneratedValue(generator="gen")
-    @Basic(optional = false)
-    @NotNull
-    private int user_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private int id;
 
     @Column(name = "user_password")
     private String user_password;
 
     @Column(name = "user_name")
+    @NotNull
     private String user_name;
 
-    @OneToMany(mappedBy = "id_user")
+    @OneToMany()
     private List<WhatTheHeck> whatTheHeck;
-
-    public int getUser_id() {
-        return user_id;
-    }
-
-    public void setUser_id(int user_id) {
-        this.user_id = user_id;
-    }
 
     public String getUser_password() {
         return user_password;
@@ -50,5 +38,13 @@ public class HeckingUsers {
 
     public void setUser_name(String user_name) {
         this.user_name = user_name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
