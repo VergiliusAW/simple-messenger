@@ -28,4 +28,10 @@ public class API {
         dao.setMessage(message);
         return Response.ok().build();
     }
+
+    @POST
+    @Path("getId")
+    public Response getId(JsonObject logPas) {
+        return Response.ok(dao.getUserId(logPas)).build();
+    }
 }

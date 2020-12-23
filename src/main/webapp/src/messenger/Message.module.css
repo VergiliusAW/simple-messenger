@@ -11,17 +11,22 @@
     box-shadow: 1px 1px 2px #e1e1e1;
 }
 
+.messageBody .name{
+    margin:0;
+    color: coral;
+}
+
 .self {
     flex-direction: row-reverse;
     margin-right: 5px;
 }
 
-.self p {
+.self .p {
     color: white;
     background: #0070f3;
 }
 
-.self p::selection {
+.self .p::selection {
     /*background-color: white;*/
     color: #EF8354;
 }
@@ -31,7 +36,7 @@
     margin-left: 5px;
 }
 
-.other p {
+.other .p {
     color: black;
     background: white;
 }

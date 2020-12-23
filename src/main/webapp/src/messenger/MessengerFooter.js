@@ -57,10 +57,9 @@ export default function MessengerFooter(props) {
 
     function buttonAction() {
         const message = {
-            isSelf: true,
-            message: document.getElementById('inp-msg').value
+            text_message: document.getElementById('inp-msg').value
         }
-        if (message.message.replaceAll(" ","")!=="") {
+        if (message.text_message.replaceAll(" ","")!=="") {
             props.callbackAdd(message)
             document.getElementById('inp-msg').value = ""
         }

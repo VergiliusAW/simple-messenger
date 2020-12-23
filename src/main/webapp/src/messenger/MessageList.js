@@ -7,7 +7,7 @@ export default function MessageList(props) {
     return (
         <div id={"message-list"} className={classes.list}>
             {props.messageList.map((message) => (
-                    <Message key={message.id} isSelf={message.isSelf}>{message.message}</Message>
+                    <Message key={message.id} isSelf={message.user_id === props.user_id} user_name={message.user_name}>{message.text_message}</Message>
                 )
             )}
         </div>
