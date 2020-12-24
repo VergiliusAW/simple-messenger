@@ -16,7 +16,7 @@
 }
 
 .svgHovered {
-    fill: #EF8354;
+    fill: #ef8354;
     transition: fill 50ms ease-in;
     cursor: pointer;
 }

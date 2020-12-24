@@ -11,8 +11,8 @@
     box-shadow: 1px 1px 2px #e1e1e1;
 }
 
-.messageBody .name{
-    margin:0;
+.messageBody .name {
+    margin: 0;
     color: coral;
 }
 
@@ -28,7 +28,7 @@
 
 .self .p::selection {
     /*background-color: white;*/
-    color: #EF8354;
+    color: #ef8354;
 }
 
 .other {
